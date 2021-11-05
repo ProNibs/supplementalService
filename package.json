@@ -1,0 +1,11 @@
+{
+  "name": "supplementalService",
+  "version": "0.0.1",
+  "description": "Supplemental service for MCMS Dashboard",
+  "main": "index.js",
+  "author": "Thomas Fowler",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
