@@ -1,5 +1,10 @@
 'use strict'
 
+const airTemperature = require('../services/airTemperature')
+const barometricPressure = require('../services/barometricPressure')
+const soilMoisture = require('../services/soilMoisture')
+const windSpeed = require('../services/windSpeed')
+
 const express = require('express')
 
 // Create express router
@@ -9,10 +14,10 @@ const router = express.Router()
 router.get('/:id', (req, res) => {
   res.json({
     id: req.params.id,
-    airTemperature: 87.0,
-    barometricPressure: 30.19,
-    windSpeed: 4.7,
-    soilMoisture: 65,
+    airTemperature: airTemperature(),
+    barometricPressure: barometricPressure(),
+    windSpeed: windSpeed(),
+    soilMoisture: soilMoisture(),
   })
 })
 
