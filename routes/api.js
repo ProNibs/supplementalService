@@ -10,6 +10,12 @@ const express = require('express')
 // Create express router
 const router = express.Router()
 
+// Health
+router.get("/health", (req,res) => {
+  res.status(200);
+  res.send("OK");
+})
+
 // GET /
 router.get('/:id', (req, res) => {
   res.json({

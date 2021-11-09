@@ -5,12 +5,16 @@ const express = require('express')
 // Create the server
 const server = express()
 
+// Pull in environment variables
+const HOSTNAME = process.env.HOSTNAME || "localhost";
+const PORT = process.env.PORT || 3001;
+
 // Start the server
-server.listen(3001, error => {
+server.listen(PORT, error => {
   if (error) {
     console.error(error)
   } else {
-    console.log('Started at http://localhost:3001')
+    console.log('Started at http://'+HOSTNAME+':'+PORT)
   }
 })
 
