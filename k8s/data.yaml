@@ -1,0 +1,13 @@
+#@data/values
+---
+appName: supplementalservice
+namespace: supplemental-service
+containerPort: 3002
+imageName: supplementalservice
+ingressHost: supplemental.127.0.0.1.nip.io
+healthCheckPath: /api/v1/health
+env: 
+- name: HOSTNAME
+  value: supplemental.127.0.0.1.nip.io
+- name: PORT
+  value: "3002"
