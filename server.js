@@ -14,7 +14,7 @@ server.listen(PORT, error => {
   if (error) {
     console.error(error)
   } else {
-    console.log('Started at http://'+HOSTNAME+':'+PORT)
+    console.log('Started at https://'+HOSTNAME+':'+PORT)
   }
 })
 
